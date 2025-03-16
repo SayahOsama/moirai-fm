@@ -11,6 +11,8 @@ from uni2ts.eval_util.plot import plot_next_multi
 from uni2ts.model.moirai import MoiraiForecast, MoiraiModule
 from uni2ts.model.moirai_moe import MoiraiMoEForecast, MoiraiMoEModule
 
+import os
+
 MODEL = "moirai-moe"  # model name: choose from {'moirai', 'moirai-moe'}
 
 # Load dataframe and plot it
@@ -154,4 +156,5 @@ plot_next_multi(
     name="pred",
     show_label=True,
 )
-plt.show()
+os.makedirs("results", exist_ok=True)
+plt.savefig("results/plot.png") 
