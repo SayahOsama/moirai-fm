@@ -154,3 +154,4 @@ plot_next_multi(
     name="pred",
     show_label=True,
 )
+plt.show()
