@@ -1,5 +1,5 @@
 # Use a Python base image (version 3.10 or higher)
-FROM python:3.10-slim
+FROM python:3.12.8
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -12,7 +12,6 @@ COPY . .
 
 # Install any dependencies if you have a requirements.txt
 RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
 
 # Command to run your model
 CMD ["bash"]
